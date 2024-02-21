@@ -1,6 +1,7 @@
 package mjss.dio.creditapplicationsystem.dto
 
 import jakarta.validation.constraints.Future
+import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.NotNull
 import mjss.dio.creditapplicationsystem.entity.Credit
@@ -17,6 +18,7 @@ data class CreditDto(
 
     @field:NotNull(message = "Invalid input")
     @field:Min(value = 1)
+    @field:Max(value = 48)
     val numberOfInstallments: Int,
 
     @field:NotNull(message = "Invalid input")
